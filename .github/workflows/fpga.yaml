@@ -1,9 +1,8 @@
+
 name: fpga
 
 on:
   push:
-    # Comment out (or remove) the following line to run the FPGA workflow on every push:
-    branches: none
   workflow_dispatch:
 
 jobs:
@@ -15,5 +14,5 @@ jobs:
         with:
           submodules: recursive
 
-      - name: FPGA bitstream for TT ASIC Sim (ICE40UP5K)
-        uses: TinyTapeout/tt-gds-action/fpga/ice40up5k@ttsky25b
+      - name: FPGA bitstream for ChipDiscover FPGA dev board
+        uses: chipfoundry/tt-gds-action/fpga/ice40up5k@main
